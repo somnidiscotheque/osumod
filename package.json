@@ -4,7 +4,9 @@
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "build": "next.js build --output public"
+    "hotloader": "webpack-dev-server --config ./webpack.config.js --mode development --port 5000",
+    "start": "nodemon -q --ignore client/ | tee logs.txt | pino-pretty",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
